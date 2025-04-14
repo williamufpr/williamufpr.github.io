@@ -6,9 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="William Alencar">
 
-<title>About Me – InsightBrasil</title>
+<title>Brasil Insight Home – InsightBrasil</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -93,7 +92,7 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./about.html" aria-current="page"> 
+    <a class="nav-link" href="./about.html"> 
 <span class="menu-text">Sobre</span></a>
   </li>  
 </ul>
@@ -113,26 +112,14 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">About Me</h1>
+<h1 class="title">Brasil Insight Home</h1>
 </div>
 
 
 
 <div class="quarto-title-meta">
 
-    <div>
-    <div class="quarto-title-meta-heading">Author</div>
-    <div class="quarto-title-meta-contents">
-             <p>William Alencar </p>
-          </div>
-  </div>
     
-    <div>
-    <div class="quarto-title-meta-heading">Published</div>
-    <div class="quarto-title-meta-contents">
-      <p class="date">Invalid Date</p>
-    </div>
-  </div>
   
     
   </div>
@@ -142,28 +129,41 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="about-me" class="level1">
-<h1>About Me</h1>
-<p>Hello! Eu sou William Alencar , e este é o site para eu apresentar meus trabalhos em Ciência de Dados e também artigos sobre os mais variados temas.</p>
-<section id="meus-interesses" class="level2">
-<h2 class="anchored" data-anchor-id="meus-interesses">Meus Interesses</h2>
-<ul>
-<li>Data Analysis and Visualization</li>
-<li>Machine Learning and AI</li>
-<li>Programming (Python, R, SQL)</li>
-<li>Sharing knowledge and collaborating on projects</li>
-</ul>
+<pre class="{r}"><code>#| label: load-packages
+#| include: false
+
+library(tidyverse)
+library(palmerpenguins)
+</code></pre>
+<section id="brasil-insight-with-quarto" class="level2">
+<h2 class="anchored" data-anchor-id="brasil-insight-with-quarto">Brasil Insight with Quarto</h2>
+<p>Com quarto podemos inserir análise de dados ( e outros códigos) diretamente no corpo do Artigo</p>
+<p>É isso que vamos ver por aqui</p>
 </section>
-<section id="contact" class="level2">
-<h2 class="anchored" data-anchor-id="contact">Contact</h2>
-<p>Feel free to connect with me:</p>
-<ul>
-<li>Email: william@goodfy.me</li>
-<li>LinkedIn: <a href="https://www.linkedin.com/in/williambr">Your LinkedIn Profile</a></li>
-</ul>
+<section id="conheça-os-pinguins" class="level2">
+<h2 class="anchored" data-anchor-id="conheça-os-pinguins">Conheça os Pinguins</h2>
+<p><img src="https://raw.githubusercontent.com/quarto-dev/quarto-web/main/docs/get-started/hello/rstudio/lter_penguins.png" class="img-fluid" style="float:right;" alt="Illustration of three species of Palmer Archipelago penguins: Chinstrap, Gentoo, and Adelie. Artwork by @allison_horst." width="298"></p>
+<p>The <code>penguins</code> data from the <a href="https://allisonhorst.github.io/palmerpenguins" title="palmerpenguins R package"><strong>palmerpenguins</strong></a> package contains size measurements for <code>{r} nrow(penguins)</code> penguins from three species observed on three islands in the Palmer Archipelago, Antarctica.</p>
+<p>The plot below shows the relationship between flipper and bill lengths of these penguins.</p>
+<pre class="{r}"><code>#| label: plot-penguins
+#| warning: false
+#| echo: false
+
+library(palmerpenguins)
+library(ggplot2)
+ggplot(penguins, 
+       aes(x = flipper_length_mm, y = bill_length_mm)) +
+  geom_point(aes(color = species, shape = species)) +
+  scale_color_manual(values = c("darkorange","purple","cyan4")) +
+  labs(
+    title = "Flipper and bill length",
+    subtitle = "Dimensions for penguins at Palmer Station LTER",
+    x = "Flipper length (mm)", y = "Bill length (mm)",
+    color = "Penguin species", shape = "Penguin species"
+  ) +
+  theme_minimal()</code></pre>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->

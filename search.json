@@ -18,14 +18,28 @@
     "href": "index.html",
     "title": "InsightBrasil",
     "section": "",
-    "text": "Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see https://quarto.org."
+    "text": "Para Entender o mundo a partir dos Dados\n\n\n\n\n\n\n\n\nFigure 1: A line plot on a polar axis"
   },
   {
-    "objectID": "index.html#quarto",
-    "href": "index.html#quarto",
-    "title": "InsightBrasil",
+    "objectID": "Quarto_R.html",
+    "href": "Quarto_R.html",
+    "title": "Brasil Insight Home",
     "section": "",
-    "text": "Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see https://quarto.org."
+    "text": "#| label: load-packages\n#| include: false\n\nlibrary(tidyverse)\nlibrary(palmerpenguins)"
+  },
+  {
+    "objectID": "Quarto_R.html#brasil-insight-with-quarto",
+    "href": "Quarto_R.html#brasil-insight-with-quarto",
+    "title": "Brasil Insight Home",
+    "section": "Brasil Insight with Quarto",
+    "text": "Brasil Insight with Quarto\nCom quarto podemos inserir análise de dados ( e outros códigos) diretamente no corpo do Artigo\nÉ isso que vamos ver por aqui"
+  },
+  {
+    "objectID": "Quarto_R.html#conheça-os-pinguins",
+    "href": "Quarto_R.html#conheça-os-pinguins",
+    "title": "Brasil Insight Home",
+    "section": "Conheça os Pinguins",
+    "text": "Conheça os Pinguins\n\nThe penguins data from the palmerpenguins package contains size measurements for {r} nrow(penguins) penguins from three species observed on three islands in the Palmer Archipelago, Antarctica.\nThe plot below shows the relationship between flipper and bill lengths of these penguins.\n#| label: plot-penguins\n#| warning: false\n#| echo: false\n\nlibrary(palmerpenguins)\nlibrary(ggplot2)\nggplot(penguins, \n       aes(x = flipper_length_mm, y = bill_length_mm)) +\n  geom_point(aes(color = species, shape = species)) +\n  scale_color_manual(values = c(\"darkorange\",\"purple\",\"cyan4\")) +\n  labs(\n    title = \"Flipper and bill length\",\n    subtitle = \"Dimensions for penguins at Palmer Station LTER\",\n    x = \"Flipper length (mm)\", y = \"Bill length (mm)\",\n    color = \"Penguin species\", shape = \"Penguin species\"\n  ) +\n  theme_minimal()"
   },
   {
     "objectID": "about.html",
