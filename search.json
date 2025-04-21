@@ -14,34 +14,6 @@
     "text": "Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see https://quarto.org."
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "InsightBrasil",
-    "section": "",
-    "text": "Para Entender o mundo a partir dos Dados\n\n\n\n\n\n\n\n\nFigure 1: A line plot on a polar axis"
-  },
-  {
-    "objectID": "Quarto_R.html",
-    "href": "Quarto_R.html",
-    "title": "Brasil Insight Home",
-    "section": "",
-    "text": "#| label: load-packages\n#| include: false\n\nlibrary(tidyverse)\nlibrary(palmerpenguins)"
-  },
-  {
-    "objectID": "Quarto_R.html#brasil-insight-with-quarto",
-    "href": "Quarto_R.html#brasil-insight-with-quarto",
-    "title": "Brasil Insight Home",
-    "section": "Brasil Insight with Quarto",
-    "text": "Brasil Insight with Quarto\nCom quarto podemos inserir análise de dados ( e outros códigos) diretamente no corpo do Artigo\nÉ isso que vamos ver por aqui"
-  },
-  {
-    "objectID": "Quarto_R.html#conheça-os-pinguins",
-    "href": "Quarto_R.html#conheça-os-pinguins",
-    "title": "Brasil Insight Home",
-    "section": "Conheça os Pinguins",
-    "text": "Conheça os Pinguins\n\nThe penguins data from the palmerpenguins package contains size measurements for {r} nrow(penguins) penguins from three species observed on three islands in the Palmer Archipelago, Antarctica.\nThe plot below shows the relationship between flipper and bill lengths of these penguins.\n#| label: plot-penguins\n#| warning: false\n#| echo: false\n\nlibrary(palmerpenguins)\nlibrary(ggplot2)\nggplot(penguins, \n       aes(x = flipper_length_mm, y = bill_length_mm)) +\n  geom_point(aes(color = species, shape = species)) +\n  scale_color_manual(values = c(\"darkorange\",\"purple\",\"cyan4\")) +\n  labs(\n    title = \"Flipper and bill length\",\n    subtitle = \"Dimensions for penguins at Palmer Station LTER\",\n    x = \"Flipper length (mm)\", y = \"Bill length (mm)\",\n    color = \"Penguin species\", shape = \"Penguin species\"\n  ) +\n  theme_minimal()"
-  },
-  {
     "objectID": "about.html",
     "href": "about.html",
     "title": "About Me",
@@ -61,5 +33,82 @@
     "title": "About Me",
     "section": "",
     "text": "Feel free to connect with me:\n\nEmail: william@goodfy.me\nLinkedIn: Your LinkedIn Profile"
+  },
+  {
+    "objectID": "Quarto_R.html",
+    "href": "Quarto_R.html",
+    "title": "Brasil Insight Home",
+    "section": "",
+    "text": "Com quarto podemos inserir análise de dados ( e outros códigos) diretamente no corpo do Artigo\nÉ isso que vamos ver por aqui. Vamos validar os recursos"
+  },
+  {
+    "objectID": "Quarto_R.html#brasil-insight-with-quarto",
+    "href": "Quarto_R.html#brasil-insight-with-quarto",
+    "title": "Brasil Insight Home",
+    "section": "",
+    "text": "Com quarto podemos inserir análise de dados ( e outros códigos) diretamente no corpo do Artigo\nÉ isso que vamos ver por aqui. Vamos validar os recursos"
+  },
+  {
+    "objectID": "Quarto_R.html#conheça-os-pinguins",
+    "href": "Quarto_R.html#conheça-os-pinguins",
+    "title": "Brasil Insight Home",
+    "section": "Conheça os Pinguins",
+    "text": "Conheça os Pinguins\n\nThe penguins data from the palmerpenguins package contains size measurements for 344 penguins from three species observed on three islands in the Palmer Archipelago, Antarctica.\nThe plot below shows the relationship between flipper and bill lengths of these penguins."
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Hello, Quarto",
+    "section": "",
+    "text": "Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see https://quarto.org."
+  },
+  {
+    "objectID": "penguin.html",
+    "href": "penguin.html",
+    "title": "penguins",
+    "section": "",
+    "text": "[1] 2\n\n\n\n\n# A tibble: 6 × 8\n  species island    bill_length_mm bill_depth_mm flipper_length_mm body_mass_g\n  &lt;fct&gt;   &lt;fct&gt;              &lt;dbl&gt;         &lt;dbl&gt;             &lt;int&gt;       &lt;int&gt;\n1 Adelie  Torgersen           39.1          18.7               181        3750\n2 Adelie  Torgersen           39.5          17.4               186        3800\n3 Adelie  Torgersen           40.3          18                 195        3250\n4 Adelie  Torgersen           NA            NA                  NA          NA\n5 Adelie  Torgersen           36.7          19.3               193        3450\n6 Adelie  Torgersen           39.3          20.6               190        3650\n# ℹ 2 more variables: sex &lt;fct&gt;, year &lt;int&gt;"
+  },
+  {
+    "objectID": "penguin.html#hello",
+    "href": "penguin.html#hello",
+    "title": "penguins",
+    "section": "",
+    "text": "[1] 2\n\n\n\n\n# A tibble: 6 × 8\n  species island    bill_length_mm bill_depth_mm flipper_length_mm body_mass_g\n  &lt;fct&gt;   &lt;fct&gt;              &lt;dbl&gt;         &lt;dbl&gt;             &lt;int&gt;       &lt;int&gt;\n1 Adelie  Torgersen           39.1          18.7               181        3750\n2 Adelie  Torgersen           39.5          17.4               186        3800\n3 Adelie  Torgersen           40.3          18                 195        3250\n4 Adelie  Torgersen           NA            NA                  NA          NA\n5 Adelie  Torgersen           36.7          19.3               193        3450\n6 Adelie  Torgersen           39.3          20.6               190        3650\n# ℹ 2 more variables: sex &lt;fct&gt;, year &lt;int&gt;"
+  },
+  {
+    "objectID": "index.html#codigo-r",
+    "href": "index.html#codigo-r",
+    "title": "InsightBrasil",
+    "section": "Codigo R",
+    "text": "Codigo R\n#| message: false\n#| results: 'asis'\n\n\nlibrary(knitr)\nlibrary(kableExtra)\n\ndados &lt;- data.frame(\n  Categoria = c(\"A\", \"B\", \"C\"),\n  Quantidade = c(12, 34, 56),\n  Percentual = c(0.2, 0.3, 0.5)\n)\n\nkable(dados, caption = \"Exemplo de Tabela\") |&gt;\n  kable_styling(\n    bootstrap_options = c(\"striped\", \"hover\", \"condensed\", \"responsive\"),\n    full_width = FALSE,\n    position = \"center\"\n  )"
+  },
+  {
+    "objectID": "indexR.html",
+    "href": "indexR.html",
+    "title": "InsightBrasil",
+    "section": "",
+    "text": "Para Entender o mundo a partir dos Dados"
+  },
+  {
+    "objectID": "indexR.html#codigo-r",
+    "href": "indexR.html#codigo-r",
+    "title": "InsightBrasil",
+    "section": "1 Codigo R",
+    "text": "1 Codigo R\n\n\nExemplo de Tabela\n\n\nCategoria\nQuantidade\nPercentual\n\n\n\n\nA\n12\n0.2\n\n\nB\n34\n0.3\n\n\nC\n56\n0.5"
+  },
+  {
+    "objectID": "index.html#meet-quarto",
+    "href": "index.html#meet-quarto",
+    "title": "Hello, Quarto",
+    "section": "",
+    "text": "Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see https://quarto.org."
+  },
+  {
+    "objectID": "index.html#meet-the-penguins",
+    "href": "index.html#meet-the-penguins",
+    "title": "Hello, Quarto",
+    "section": "Meet the penguins",
+    "text": "Meet the penguins\n\nThe penguins data from the palmerpenguins package contains size measurements for 344 penguins from three species observed on three islands in the Palmer Archipelago, Antarctica.\nThe plot below shows the relationship between flipper and bill lengths of these penguins.\n\n\nCode\n\nggplot(penguins, \n       aes(x = flipper_length_mm, y = bill_length_mm)) +\n  geom_point(aes(color = species, shape = species)) +\n  scale_color_manual(values = c(\"darkorange\",\"purple\",\"cyan4\")) +\n  labs(\n    title = \"Flipper and bill length\",\n    subtitle = \"Dimensions for penguins at Palmer Station LTER\",\n    x = \"Flipper length (mm)\", y = \"Bill length (mm)\",\n    color = \"Penguin species\", shape = \"Penguin species\"\n  ) +\n  theme_minimal()\n\n\n\n\n\n\n\n\n\n\n\nCode\n\nimport numpy as np\nnp.float = float \nimport matplotlib.pyplot as plt\n\nr = np.arange(0, 2, 0.01)\ntheta = 2 * np.pi * r\nfig, ax = plt.subplots(\n  subplot_kw = {'projection': 'polar'} \n)\nax.plot(theta, r)\nax.set_rticks([0.5, 1, 1.5, 2])\nax.grid(True)\nplt.show()\n\n\n\n\n\n\n\n\nFigure 1: A line plot on a polar axis"
   }
 ]
